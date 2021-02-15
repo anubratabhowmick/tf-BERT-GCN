@@ -6,15 +6,17 @@ Our code is based on [BERT](https://github.com/google-research/bert) and [GCN](h
 
 ## Data
 - [Full Context PeerRead](https://bert-gcn-for-paper-citation.s3.ap-northeast-2.amazonaws.com/PeerRead/full_context_PeerRead.csv) : Created by processing [allenai-PeerRead](https://github.com/allenai/PeerRead)
+- [BERT-BASE Uncased](https://storage.googleapis.com/bert_models/2020_02_20/uncased_L-12_H-768_A-12.zip)
+- [SciBert-BASE Uncased](https://s3-us-west-2.amazonaws.com/ai2-s2-research/scibert/tensorflow_models/scibert_scivocab_uncased.tar.gz)
 
 In order o run the tensorflow version of the BERT-GCN Square mode:
 
 ```
 1. Download the repository to your local machine.
-2. Download ![Full Context PeerRead](https://bert-gcn-for-paper-citation.s3.ap-northeast-2.amazonaws.com/PeerRead/full_context_PeerRead.csv) dataset
+2. Download Full Context PeerRead dataset from the above link
 3. Save the dataset in /glue/ACRS folder.
 4. Create a folder pre_train with subfolders gcn, BERT-base, and BERT_Sci_Base.
-5. Download the pretrained [BERT-base](https://storage.googleapis.com/bert_models/2020_02_20/uncased_L-12_H-768_A-12.zip) and save in BERT-base folder, and the [Sci-BERT base](https://s3-us-west-2.amazonaws.com/ai2-s2-research/scibert/tensorflow_models/scibert_scivocab_uncased.tar.gz) and save in BERT_Sci_Base.
+5. Download the pretrained BERT-base, save it in BERT-base folder, and the Sci-BERT base and save in BERT_Sci_Base. Both downloads have been linked above.
 6. First run the gcn_pretrain.py using the command python gcn_pretrain.py  --dataset PeerRead --gcn_hidden1 9529 --paper_author author
   ```
     gcn_hidden1 = 9529 and paper_author = author when you want to train the co-authorship network.
@@ -48,7 +50,7 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
     * BERT Parameters: You can refer to it [here](https://github.com/google-research/bert).
     * `--do_train`, `--do_predict`, `--data_dir`, `--vocab_file`, `--bert_config_file`, `--init_checkpoint`, ...
   ```
-  *  In order to run BERT-base and SciBERT-base model, ```modeling.py``` has to be updated by keeping the relevant embedding output in tf.concat and removing the other one. General version of the model will be uploaded in some time.
+  *  In order to run BERT-base and SciBERT-base model, modeling.py has to be updated by keeping the relevant embedding output in tf.concat and removing the other one. General version of the model will be uploaded in some time.
 ```
 ## Result
 Our result from the GCN Square are shown below:
