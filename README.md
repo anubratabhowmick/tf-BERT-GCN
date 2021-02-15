@@ -55,7 +55,7 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
   *  In order to run BERT-base and SciBERT-base model, modeling.py has to be updated by keeping the relevant embedding output in tf.concat and removing the other one. General version of the model will be uploaded in some time.
 ```
 ## Result
-Our result from the GCN Square are shown below:
+Our results from the BERT-GCN Square are shown below:
 ![Alt text](./images/result.png?raw=true "Result")
 
 ## PyTorch Version
