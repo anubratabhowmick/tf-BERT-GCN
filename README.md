@@ -21,9 +21,10 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
   ```
     gcn_hidden1 = 9529 and paper_author = author when you want to train the co-authorship network.
     gcn_hidden1 = 4837 and paper_author = paper when you want to train the citation network. 
-   '''
-      The parameter descriptions can be found [here](https://github.com/tkipf/gae).
-      *`--gcn_model`, `--gcn_lr`, `--gcn_epochs`, `--gcn_hidden1`, `--gcn_hidden2`, ... 
+   
+  The parameter descriptions can be found [here](https://github.com/tkipf/gae). 
+  *`--gcn_model`, `--gcn_lr`, `--gcn_epochs`, `--gcn_hidden1`, `--gcn_hidden2`, ... 
+   
    ```
 7. After the citation and co-authorship networks are generated, you need to run the run_classifier.py with the following commands:
   ```
@@ -48,8 +49,7 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
     * `--max_seq_length` : Length of cited text to use 
     * `--gpu` : The gpu to run code
   
-  '''
-   BERT Parameters: You can refer to it [here](https://github.com/google-research/bert).
+  BERT Parameters: You can refer to it [here](https://github.com/google-research/bert).
     * `--do_train`, `--do_predict`, `--data_dir`, `--vocab_file`, `--bert_config_file`, `--init_checkpoint`, ...
   ```
   *  In order to run BERT-base and SciBERT-base model, modeling.py has to be updated by keeping the relevant embedding output in tf.concat and removing the other one. General version of the model will be uploaded in some time.
