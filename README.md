@@ -35,7 +35,7 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
     --max_seq_length=50 --train_batch_size=16 --learning_rate=2e-5 \
     --num_train_epochs=30.0 --output_dir=./output --frequency=5 --year 2017
     
-    PeerRead (with BERT base): ython3 run_classifier.py --model=bert_gcn --dataset=PeerRead --do_train=true --do_predict=true \
+    PeerRead (with BERT base): python3 run_classifier.py --model=bert_gcn --dataset=PeerRead --do_train=true --do_predict=true \
     --data_dir=./glue/ACRS --vocab_file=./pre_train/BERT-base/vocab.txt \
     --bert_config_file=./pre_train/BERT-base/bert_config.json \
     --init_checkpoint=./pre_train/BERT-base/bert_model.ckpt \
