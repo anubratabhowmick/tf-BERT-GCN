@@ -51,4 +51,4 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
 ```
 ## Result
 Our result from the GCN Square are shown below:
-![](https://imgur.com/a/hEk3BBN)
+![](https://imgur.com/3np9p3Y)
