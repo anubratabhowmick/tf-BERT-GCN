@@ -20,10 +20,10 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
 6. First run the gcn_pretrain.py using the command python gcn_pretrain.py  --dataset PeerRead --gcn_hidden1 9529 --paper_author author
   ```
     gcn_hidden1 = 9529 and paper_author = author when you want to train the co-authorship network.
-    gcn_hidden1 = 4837 and paper_author = paper when you want to train the citation network.
-    The parameter descriptions can be found [here](https://github.com/tkipf/gae).
-      * `--gcn_model`, `--gcn_lr`, `--gcn_epochs`, `--gcn_hidden1`, `--gcn_hidden2`, ... 
-  ```
+    gcn_hidden1 = 4837 and paper_author = paper when you want to train the citation network. 
+    * The parameter descriptions can be found [here](https://github.com/tkipf/gae).
+      *`--gcn_model`, `--gcn_lr`, `--gcn_epochs`, `--gcn_hidden1`, `--gcn_hidden2`, ... 
+   ```
 7. After the citation and co-authorship networks are generated, you need to run the run_classifier.py with the following commands:
   ```
     PeerRead (with Sci-BERT): python3 run_classifier.py --model=bert_gcn --dataset=PeerRead --do_train=true --do_predict=true \
@@ -42,7 +42,7 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
     
     * General Parameters:
     * `--model` (Required): The mode to run the `run_classifier.py` script in. Possible values: `bert` or `bert_gcn`
-    * `--dataset` (Required): The dataset to run the `run_classifier.py` script in. Possible values: `AAN` or `PeerRead`
+    * `--dataset` (Required): The dataset to run the `run_classifier.py` script in. Possible values: `PeerRead`
     * `--frequency` (Required): Parse datasets more frequently
     * `--max_seq_length` : Length of cited text to use 
     * `--gpu` : The gpu to run code
