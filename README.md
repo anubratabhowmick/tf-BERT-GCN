@@ -2,7 +2,7 @@
 
 We propose the extension of the model proposed by Jeong, Jang & Park (2020) by combining the context, citation history with co-authorship information into the recommendation system. We also propose to use more domain-specific embeddings to better capture the semantics in the context. Our experiments show the positive effect of co- authorship information on citation recommendations, and that our model based on the combination of domain- specifically embedded context, the citation and the co-authorship history significantly outperforms the basic context-based recommendation model.
 
-Our code is based on [BERT](https://github.com/google-research/bert) and [GCN](https://github.com/tkipf/gae/)).
+Our code is based on [BERT](https://github.com/google-research/bert) and [GCN](https://github.com/tkipf/gae/).
 
 ## Data
 - [Full Context PeerRead](https://bert-gcn-for-paper-citation.s3.ap-northeast-2.amazonaws.com/PeerRead/full_context_PeerRead.csv) : Created by processing [allenai-PeerRead](https://github.com/allenai/PeerRead)
