@@ -5,7 +5,7 @@ We propose the extension of the model proposed by Jeong, Jang & Park (2020) by c
 Our code is based on [BERT](https://github.com/google-research/bert) and [GCN](https://github.com/tkipf/gae/).
 
 ## Data
-- ![Full Context PeerRead](https://bert-gcn-for-paper-citation.s3.ap-northeast-2.amazonaws.com/PeerRead/full_context_PeerRead.csv) : Created by processing [allenai-PeerRead](https://github.com/allenai/PeerRead)
+- [Full Context PeerRead](https://bert-gcn-for-paper-citation.s3.ap-northeast-2.amazonaws.com/PeerRead/full_context_PeerRead.csv) : Created by processing [allenai-PeerRead](https://github.com/allenai/PeerRead)
 
 In order o run the tensorflow version of the BERT-GCN Square mode:
 
