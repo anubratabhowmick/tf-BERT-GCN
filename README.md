@@ -11,7 +11,7 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
 
 ```
 1. Download the repository to your local machine.
-2. Download [Full Context PeerRead](https://bert-gcn-for-paper-citation.s3.ap-northeast-2.amazonaws.com/PeerRead/full_context_PeerRead.csv) dataset
+2. Download ![Full Context PeerRead](https://bert-gcn-for-paper-citation.s3.ap-northeast-2.amazonaws.com/PeerRead/full_context_PeerRead.csv) dataset
 3. Save the dataset in /glue/ACRS folder.
 4. Create a folder pre_train with subfolders gcn, BERT-base, and BERT_Sci_Base.
 5. Download the pretrained [BERT-base](https://storage.googleapis.com/bert_models/2020_02_20/uncased_L-12_H-768_A-12.zip) and save in BERT-base folder, and the [Sci-BERT base](https://s3-us-west-2.amazonaws.com/ai2-s2-research/scibert/tensorflow_models/scibert_scivocab_uncased.tar.gz) and save in BERT_Sci_Base.
