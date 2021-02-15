@@ -17,7 +17,7 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
 3. Save the dataset in /glue/ACRS folder.
 4. Create a folder pre_train with subfolders gcn, BERT-base, and BERT_Sci_Base.
 5. Download the pretrained BERT-base, save it in BERT-base folder, and the Sci-BERT base and save in BERT_Sci_Base. Both downloads have been linked above.
-6. First run the gcn_pretrain.py using the command python gcn_pretrain.py  --dataset PeerRead --gcn_hidden1 9529 --paper_author author
+6. First run the gcn_pretrain.py using the command: python gcn_pretrain.py  --dataset PeerRead --gcn_hidden1 9529 --paper_author author
   ```
     gcn_hidden1 = 9529 and paper_author = author when you want to train the co-authorship network.
     gcn_hidden1 = 4837 and paper_author = paper when you want to train the citation network. 
