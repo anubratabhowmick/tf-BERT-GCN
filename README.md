@@ -48,6 +48,7 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
     * BERT Parameters: You can refer to it [here](https://github.com/google-research/bert).
     * `--do_train`, `--do_predict`, `--data_dir`, `--vocab_file`, `--bert_config_file`, `--init_checkpoint`, ...
   ```
+  *  In order to run BERT-base and SciBERT-base model, ```modeling.py``` has to be updated by keeping the relevant embedding output in tf.concat and removing the other one. General version of the model will be uploaded in some time.
 ```
 ## Result
 Our result from the GCN Square are shown below:
