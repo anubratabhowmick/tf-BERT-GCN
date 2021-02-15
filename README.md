@@ -53,3 +53,9 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
 ## Result
 Our result from the GCN Square are shown below:
 ![Alt text](./images/result.png?raw=true "Result")
+
+## PyTorch Version
+The pyTorch version of the code has been created by [Ashish Singhal](https://github.com/theGuyWithBlackTie) and can be found [here](https://github.com/theGuyWithBlackTie/pytorch-BERT-GCN).
+
+## Credits
+Original BERT-GCN code, from the paper Jeong, Jang & Park (2020), can be found [here](https://github.com/TeamLab/bert-gcn-for-paper-citation/).
