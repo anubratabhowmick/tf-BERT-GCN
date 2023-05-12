@@ -60,6 +60,3 @@ Our results from the BERT-GCN Square are shown below:
 
 ## PyTorch Version
 The pyTorch version of the code has been created by [Ashish Singhal](https://github.com/theGuyWithBlackTie) and can be found [here](https://github.com/theGuyWithBlackTie/pytorch-BERT-GCN).
-
-## Credits
-Original BERT-GCN code, from the paper Jeong, Jang & Park (2020), can be found [here](https://github.com/TeamLab/bert-gcn-for-paper-citation/).
