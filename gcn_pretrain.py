@@ -1,5 +1,5 @@
-from GCN.code.gcn_train import paper_pretrain, coauthor_pretrain
-import GCN.code.config as config
+from gcn.gcn_train import paper_pretrain, coauthor_pretrain
+import gcn.config as config
 import os
 
 

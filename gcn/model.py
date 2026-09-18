@@ -1,4 +1,4 @@
-from GCN.code.layers import GraphConvolution, GraphConvolutionSparse, InnerProductDecoder
+from gcn.layers import GraphConvolution, GraphConvolutionSparse, InnerProductDecoder
 import tensorflow as tf
 
 

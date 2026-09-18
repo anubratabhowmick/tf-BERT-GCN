@@ -1,6 +1,6 @@
 import numpy as np
 import scipy.sparse as sp
-import GCN.code.config as config
+import gcn.config as config
 
 def sparse_to_tuple(sparse_mx):
     if not sp.isspmatrix_coo(sparse_mx):

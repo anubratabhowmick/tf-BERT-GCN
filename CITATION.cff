@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "tf-BERT-GCN"
+authors:
+  - family-names: Bhowmick
+    given-names: Anubrata
+  - family-names: Singhal
+    given-names: Ashish
+  - family-names: Wang
+    given-names: Shenghui
+license: MIT
+repository-code: "https://github.com/anubratabhowmick/tf-BERT-GCN"
+preferred-citation:
+  type: conference-paper
+  title: "Augmenting context-aware citation recommendations with citation and co-authorship history"
+  authors:
+    - family-names: Bhowmick
+      given-names: Anubrata
+    - family-names: Singhal
+      given-names: Ashish
+    - family-names: Wang
+      given-names: Shenghui
+  year: 2021
+  month: 7
+  start: "115"
+  end: "120"
+  conference:
+    name: "18th International Conference of the International Society for Scientometrics and Informetrics (ISSI 2021)"
+  url: "https://research.utwente.nl/en/publications/augmenting-context-aware-citation-recommendations-with-citation-a/"

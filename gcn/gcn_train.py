@@ -14,10 +14,10 @@ from itertools import combinations
 
 random.seed(42)
 
-from GCN.code.utils import load_data
-from GCN.code.optimizer import OptimizerAE, OptimizerVAE
-from GCN.code.model import GCNModelAE, GCNModelVAE
-from GCN.code.preprocessing import preprocess_graph, construct_feed_dict, sparse_to_tuple, mask_test_edges
+from gcn.utils import load_data
+from gcn.optimizer import OptimizerAE, OptimizerVAE
+from gcn.model import GCNModelAE, GCNModelVAE
+from gcn.preprocessing import preprocess_graph, construct_feed_dict, sparse_to_tuple, mask_test_edges
 
 
 def paper_pretrain(data_name, gcn_model, gcn_epochs, gcn_lr, gcn_hidden1, gcn_hidden2, save_dir):

@@ -1,4 +1,4 @@
-from GCN.code.initializations import *
+from gcn.initializations import *
 import tensorflow as tf
 
 # global unique layer ID dictionary for layer name assignment

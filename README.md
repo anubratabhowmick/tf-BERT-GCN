@@ -4,6 +4,17 @@ We propose the extension of the model proposed by Jeong, Jang & Park (2020) by c
 
 Our code is based on [BERT](https://github.com/google-research/bert) and [GCN](https://github.com/tkipf/gae/).
 
+## Project Structure
+
+```
+tf-BERT-GCN/
+├── gcn_pretrain.py  # Entry point: pretrain the citation / co-authorship GCN
+├── main.py          # Entry point: train/evaluate the BERT(-GCN) classifier
+├── bert/            # BERT model, tokenization, and optimization code
+├── gcn/             # GCN model, layers, training, and preprocessing code
+└── assets/images/   # Figures used in this README
+```
+
 ## Data
 - [Full Context PeerRead](https://bert-gcn-for-paper-citation.s3.ap-northeast-2.amazonaws.com/PeerRead/full_context_PeerRead.csv) : Created by processing [allenai-PeerRead](https://github.com/allenai/PeerRead)
 - [BERT-BASE Uncased](https://storage.googleapis.com/bert_models/2020_02_20/uncased_L-12_H-768_A-12.zip)
@@ -26,16 +37,16 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
   *`--gcn_model`, `--gcn_lr`, `--gcn_epochs`, `--gcn_hidden1`, `--gcn_hidden2`, ... 
    
    ```
-7. After the citation and co-authorship networks are generated, you need to run the run_classifier.py with the following commands:
+7. After the citation and co-authorship networks are generated, you need to run the main.py with the following commands:
   ```
-    PeerRead (with Sci-BERT): python3 run_classifier.py --model=bert_gcn --dataset=PeerRead --do_train=true --do_predict=true \
+    PeerRead (with Sci-BERT): python3 main.py --model=bert_gcn --dataset=PeerRead --do_train=true --do_predict=true \
     --data_dir=./glue/ACRS --vocab_file=./pre_train/BERT_Sci_Base/vocab.txt \
     --bert_config_file=./pre_train/BERT_Sci_Base/bert_config.json \
     --init_checkpoint=./pre_train/BBERT_Sci_Base/bert_model.ckpt \
     --max_seq_length=50 --train_batch_size=16 --learning_rate=2e-5 \
     --num_train_epochs=30.0 --output_dir=./output --frequency=5 --year 2017
     
-    PeerRead (with BERT base): python3 run_classifier.py --model=bert_gcn --dataset=PeerRead --do_train=true --do_predict=true \
+    PeerRead (with BERT base): python3 main.py --model=bert_gcn --dataset=PeerRead --do_train=true --do_predict=true \
     --data_dir=./glue/ACRS --vocab_file=./pre_train/BERT-base/vocab.txt \
     --bert_config_file=./pre_train/BERT-base/bert_config.json \
     --init_checkpoint=./pre_train/BERT-base/bert_model.ckpt \
@@ -43,8 +54,8 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
     --num_train_epochs=30.0 --output_dir=./output --frequency=5 --year 2017
     
     * General Parameters:
-    * `--model` (Required): The mode to run the `run_classifier.py` script in. Possible values: `bert` or `bert_gcn`
-    * `--dataset` (Required): The dataset to run the `run_classifier.py` script in. Possible values: `PeerRead`
+    * `--model` (Required): The mode to run the `main.py` script in. Possible values: `bert` or `bert_gcn`
+    * `--dataset` (Required): The dataset to run the `main.py` script in. Possible values: `PeerRead`
     * `--frequency` (Required): Parse datasets more frequently
     * `--max_seq_length` : Length of cited text to use 
     * `--gpu` : The gpu to run code
@@ -56,7 +67,24 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
 ```
 ## Result
 Our results from the BERT-GCN Square are shown below:
-![Alt text](./images/result.png?raw=true "Result")
+![Alt text](./assets/images/result.png?raw=true "Result")
 
 ## PyTorch Version
 The pyTorch version of the code has been created by [Ashish Singhal](https://github.com/theGuyWithBlackTie) and can be found [here](https://github.com/theGuyWithBlackTie/pytorch-BERT-GCN).
+
+## Citation
+If you use this codebase in your research, please cite the paper this work is based on:
+
+> Bhowmick, A., Singhal, A., & Wang, S. (2021). Augmenting context-aware citation recommendations with citation and co-authorship history. *18th International Conference of the International Society for Scientometrics and Informetrics (ISSI 2021)*, 115–120.
+
+```bibtex
+@inproceedings{bhowmick2021augmenting,
+  title     = {Augmenting context-aware citation recommendations with citation and co-authorship history},
+  author    = {Bhowmick, Anubrata and Singhal, Ashish and Wang, Shenghui},
+  booktitle = {18th International Conference of the International Society for Scientometrics and Informetrics (ISSI 2021)},
+  pages     = {115--120},
+  year      = {2021}
+}
+```
+
+See [`CITATION.cff`](./CITATION.cff) for a machine-readable citation (GitHub's "Cite this repository" button uses this file automatically).
