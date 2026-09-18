@@ -69,6 +69,8 @@ In order o run the tensorflow version of the BERT-GCN Square mode:
 Our results from the BERT-GCN Square are shown below:
 ![Alt text](./assets/images/result.png?raw=true "Result")
 
+![SciBERT-GCN² Recall@k vs. BERT baselines](./assets/images/results.gif "Recall@k comparison")
+
 ## PyTorch Version
 The pyTorch version of the code has been created by [Ashish Singhal](https://github.com/theGuyWithBlackTie) and can be found [here](https://github.com/theGuyWithBlackTie/pytorch-BERT-GCN).
 
